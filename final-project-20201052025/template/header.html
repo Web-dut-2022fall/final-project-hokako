@@ -1,0 +1,32 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+
+
+    {% for cat in cats %}
+
+    <li><a href="/category/{{cat.url}}">{{cat.title}}</a></li>
+
+    {% endfor %}
+
+</ul>
+<style>
+    .ml {
+    margin-left:5px;
+    display:block;
+    }
+</style>
+<nav class="bg-primary">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo" class="ml">Blog by hoka</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/about">关于</a></li>
+                <li><a href="/admin">管理员入口</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">分类<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
